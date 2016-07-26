@@ -1,7 +1,0 @@
-/Users/maksat/Projects/Somee/Somee.UITests/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
-/Users/maksat/Projects/Somee/Somee.UITests/bin/Debug/Somee.UITests.dll.mdb
-/Users/maksat/Projects/Somee/Somee.UITests/bin/Debug/Somee.UITests.dll
-/Users/maksat/Projects/Somee/Somee.UITests/obj/Debug/Somee.UITests.dll
-/Users/maksat/Projects/Somee/Somee.UITests/obj/Debug/Somee.UITests.dll.mdb
-/Users/maksat/Projects/Somee/Somee.UITests/bin/Debug/nunit.framework.dll
-/Users/maksat/Projects/Somee/Somee.UITests/bin/Debug/Xamarin.UITest.dll
