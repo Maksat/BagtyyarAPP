@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bagtyyar", "Bagtyyar\Bagtyyar.csproj", "{99E1C48A-EF75-46B8-A1C7-955B9659B794}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bagtyyar.UITests", "Bagtyyar.UITests\Bagtyyar.UITests.csproj", "{8E56F59D-50EB-48AE-8BC9-B72BD2CA707D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{99E1C48A-EF75-46B8-A1C7-955B9659B794}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99E1C48A-EF75-46B8-A1C7-955B9659B794}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99E1C48A-EF75-46B8-A1C7-955B9659B794}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99E1C48A-EF75-46B8-A1C7-955B9659B794}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E56F59D-50EB-48AE-8BC9-B72BD2CA707D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E56F59D-50EB-48AE-8BC9-B72BD2CA707D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E56F59D-50EB-48AE-8BC9-B72BD2CA707D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E56F59D-50EB-48AE-8BC9-B72BD2CA707D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

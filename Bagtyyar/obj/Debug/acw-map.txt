@@ -1,0 +1,8 @@
+Bagtyyar.SplashActivity, Bagtyyar;md59161c653c74e4d18edab6082fb1d9960.SplashActivity
+Bagtyyar.SplashActivity, Bagtyyar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md59161c653c74e4d18edab6082fb1d9960.SplashActivity
+Bagtyyar.SplashActivity;md59161c653c74e4d18edab6082fb1d9960.SplashActivity
+bagtyyar.SplashActivity;md59161c653c74e4d18edab6082fb1d9960.SplashActivity
+Bagtyyar.LanguagesActivity, Bagtyyar;md59161c653c74e4d18edab6082fb1d9960.LanguagesActivity
+Bagtyyar.LanguagesActivity, Bagtyyar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md59161c653c74e4d18edab6082fb1d9960.LanguagesActivity
+Bagtyyar.LanguagesActivity;md59161c653c74e4d18edab6082fb1d9960.LanguagesActivity
+bagtyyar.LanguagesActivity;md59161c653c74e4d18edab6082fb1d9960.LanguagesActivity

@@ -1,0 +1,18 @@
+﻿<Properties StartupItem="Bagtyyar/Bagtyyar.csproj">
+  <MonoDevelop.Ide.ItemProperties.Bagtyyar AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.WAWJMI0YD0" AndroidDesignerPreferredTheme="Theme.Black.NoTitleBar.Fullscreen" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Bagtyyar.UITests/Tests.cs">
+    <Files>
+      <File FileName="Bagtyyar/SplashActivity.cs" Line="9" Column="29" />
+      <File FileName="Bagtyyar/LanguagesActivity.cs" Line="10" Column="8" />
+      <File FileName="Bagtyyar/Properties/AssemblyInfo.cs" Line="8" Column="35" />
+      <File FileName="Bagtyyar/Resources/values/Strings.xml" Line="4" Column="34" />
+      <File FileName="Bagtyyar.UITests/Tests.cs" Line="9" Column="19" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Somee AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Android_Accelerated_x86" AndroidDesignerPreferredTheme="Theme.Black.NoTitleBar.Fullscreen" />
+</Properties>
