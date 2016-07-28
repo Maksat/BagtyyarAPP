@@ -67,6 +67,18 @@
     <AndroidResource Include="Resources\layout\SplashLayout.axml" />
     <AndroidResource Include="Resources\drawable\SplashBackground.jpg" />
     <AndroidResource Include="Resources\layout\LanguagesLayout.axml" />
+    <AndroidResource Include="Resources\drawable\EN_press.png" />
+    <AndroidResource Include="Resources\drawable\EN_sel.png" />
+    <AndroidResource Include="Resources\drawable\EN.png" />
+    <AndroidResource Include="Resources\drawable\RU_press.png" />
+    <AndroidResource Include="Resources\drawable\RU_sel.png" />
+    <AndroidResource Include="Resources\drawable\RU.png" />
+    <AndroidResource Include="Resources\drawable\TM_press.png" />
+    <AndroidResource Include="Resources\drawable\TM_sel.png" />
+    <AndroidResource Include="Resources\drawable\TM.png" />
+    <AndroidResource Include="Resources\drawable\RuButton.xml" />
+    <AndroidResource Include="Resources\drawable\EnButton.xml" />
+    <AndroidResource Include="Resources\drawable\TmButton.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

@@ -9,32 +9,43 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingBottom="130dip"
+        android:layout_marginRight="-25dip"
         android:id="@+id/textViewTM" />
     <Button
         android:text=""
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/TmButton"
         android:id="@+id/buttonTM" />
     <TextView
         android:text="RU"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingBottom="130dip"
+        android:layout_marginRight="-25dip"
+        android:layout_marginLeft="50dip"
         android:id="@+id/textViewRU" />
     <Button
         android:text=""
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/RuButton"
         android:id="@+id/buttonRU" />
     <TextView
         android:text="EN"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingBottom="130dip"
+        android:layout_marginRight="-25dip"
+        android:layout_marginLeft="50dip"
         android:id="@+id/textViewEN" />
     <Button
         android:text=""
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/EnButton"
         android:id="@+id/buttonEN" />
 </LinearLayout>

@@ -43,8 +43,6 @@ namespace Bagtyyar
 
 			CallLanguagesPage();
 		}
-
-	
 	}
 }
 
