@@ -13,8 +13,8 @@ namespace Bagtyyar
 	         )]
 	public class SplashActivity : Activity
 	{	
-		const int SPLASH_ANIMATION_DURATION = 2000;
-		const int SPLASH_DISAPPEAR_DURATION = 5000;
+		const int SPLASH_ANIMATION_DURATION = 0;
+		const int SPLASH_DISAPPEAR_DURATION = 0;
 		
 		private async void CallLanguagesPage()
 		{

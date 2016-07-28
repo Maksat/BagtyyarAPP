@@ -102,29 +102,35 @@ namespace Bagtyyar
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f060005
-			public const int buttonEN = 2131099653;
-			
-			// aapt resource value: 0x7f060003
-			public const int buttonRU = 2131099651;
-			
-			// aapt resource value: 0x7f060001
-			public const int buttonTM = 2131099649;
-			
-			// aapt resource value: 0x7f060007
-			public const int imageViewSplash = 2131099655;
+			// aapt resource value: 0x7f060008
+			public const int button1 = 2131099656;
 			
 			// aapt resource value: 0x7f060006
-			public const int textView1 = 2131099654;
+			public const int buttonEN = 2131099654;
 			
 			// aapt resource value: 0x7f060004
-			public const int textViewEN = 2131099652;
+			public const int buttonRU = 2131099652;
 			
 			// aapt resource value: 0x7f060002
-			public const int textViewRU = 2131099650;
+			public const int buttonTM = 2131099650;
+			
+			// aapt resource value: 0x7f060009
+			public const int imageViewSplash = 2131099657;
+			
+			// aapt resource value: 0x7f060007
+			public const int linearLayout1 = 2131099655;
 			
 			// aapt resource value: 0x7f060000
-			public const int textViewTM = 2131099648;
+			public const int textView1 = 2131099648;
+			
+			// aapt resource value: 0x7f060005
+			public const int textViewEN = 2131099653;
+			
+			// aapt resource value: 0x7f060003
+			public const int textViewRU = 2131099651;
+			
+			// aapt resource value: 0x7f060001
+			public const int textViewTM = 2131099649;
 			
 			static Id()
 			{
@@ -140,13 +146,34 @@ namespace Bagtyyar
 		{
 			
 			// aapt resource value: 0x7f040000
-			public const int LanguagesLayout = 2130968576;
+			public const int EntertainmentPageLayout = 2130968576;
 			
 			// aapt resource value: 0x7f040001
-			public const int MainLayout = 2130968577;
+			public const int HomePageLayout = 2130968577;
 			
 			// aapt resource value: 0x7f040002
-			public const int SplashLayout = 2130968578;
+			public const int LanguagesLayout = 2130968578;
+			
+			// aapt resource value: 0x7f040003
+			public const int MainLayout = 2130968579;
+			
+			// aapt resource value: 0x7f040004
+			public const int RestaurantDetailsPageLayout = 2130968580;
+			
+			// aapt resource value: 0x7f040005
+			public const int RestaurantPageLayout = 2130968581;
+			
+			// aapt resource value: 0x7f040006
+			public const int ServicesPageLayout = 2130968582;
+			
+			// aapt resource value: 0x7f040007
+			public const int SplashLayout = 2130968583;
+			
+			// aapt resource value: 0x7f040008
+			public const int TVPageLayout = 2130968584;
+			
+			// aapt resource value: 0x7f040009
+			public const int VideoPageLayout = 2130968585;
 			
 			static Layout()
 			{

@@ -52,6 +52,12 @@
     <Compile Include="LanguagesActivity.cs" />
     <Compile Include="Globals.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="HomePageFragment.cs" />
+    <Compile Include="TVPageFragment.cs" />
+    <Compile Include="VideoPageFragment.cs" />
+    <Compile Include="RestaurantPageFragment.cs" />
+    <Compile Include="ServicesPageFragment.cs" />
+    <Compile Include="EntertainmentPageFragment.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -84,6 +90,13 @@
     <AndroidResource Include="Resources\layout\MainLayout.axml" />
     <AndroidResource Include="Resources\drawable\background.jpg" />
     <AndroidResource Include="Resources\drawable\TileBackground.xml" />
+    <AndroidResource Include="Resources\layout\HomePageLayout.axml" />
+    <AndroidResource Include="Resources\layout\TVPageLayout.axml" />
+    <AndroidResource Include="Resources\layout\VideoPageLayout.axml" />
+    <AndroidResource Include="Resources\layout\RestaurantPageLayout.axml" />
+    <AndroidResource Include="Resources\layout\RestaurantDetailsPageLayout.axml" />
+    <AndroidResource Include="Resources\layout\ServicesPageLayout.axml" />
+    <AndroidResource Include="Resources\layout\EntertainmentPageLayout.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

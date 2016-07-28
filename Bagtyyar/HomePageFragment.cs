@@ -14,28 +14,18 @@ using Android.Widget;
 
 namespace Bagtyyar
 {
-	public class TVPageFragment : Fragment
+	public class HomePageFragment : Fragment
 	{
 		public override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
-
-			// Create your fragment here
 		}
 
 		public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 		{
-			View view = inflater.Inflate(Resource.Layout.TVPageLayout, container, false);
-			return view;
-		}
+			View view = inflater.Inflate(Resource.Layout.HomePageLayout, container, false);
 
-		public override void OnHiddenChanged(bool hidden)
-		{
-			if (!hidden)
-			{
-				
-			}
-			base.OnHiddenChanged(hidden);
+			return view;
 		}
 	}
 }
