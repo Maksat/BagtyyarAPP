@@ -37,6 +37,25 @@ namespace Bagtyyar
 			}
 		}
 
+		public void ClearSettings()
+		{
+			if (!File.Exists(Globals.SettingsPath))
+			{
+				return;
+			}
+
+			try
+			{
+				File.Delete(Globals.SettingsPath);
+			}
+			catch (Exception e)
+			{
+				Console.WriteLine(e.ToString());
+			}
+			currentSettings = null;
+
+		}
+
 		static Settings deserializeSettings()
 		{
 			XmlSerializer serializer = new XmlSerializer(typeof(Settings));//initialises the serialiser

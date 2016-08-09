@@ -25,6 +25,17 @@ namespace Bagtyyar
 			alert.SetView(content);
 			alert.SetTitle("Settings");
 			alert.SetPositiveButton("Close", delegate {  });
+			alert.SetNegativeButton("Clear settings", delegate {
+				var confAlert = new AlertDialog.Builder(parent);
+				confAlert.SetTitle("Are you sure?");
+				confAlert.SetMessage("If you press YES we will erase all settings, do you want to proceed?");
+				confAlert.SetPositiveButton("Yes", delegate {
+					Settings.CurrentSettings.ClearSettings();
+				});
+				confAlert.SetNegativeButton("No", delegate { });
+				confAlert.Create().Show();
+			});
+
 			alert.Create();
 			AssignHandlers();
 
