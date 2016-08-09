@@ -6,7 +6,7 @@ using Android.Views.Animations;
 
 namespace Bagtyyar
 {
-	[Activity(Label = "Bagtyyar", 
+	[Activity(Label = "Bagtyýar", 
 	          MainLauncher = true, 
 	          Icon = "@mipmap/icon", 
 	          Theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"

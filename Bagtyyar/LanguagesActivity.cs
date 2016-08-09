@@ -10,7 +10,9 @@ using Android.Widget;
 
 namespace Bagtyyar
 {
-	[Activity(Label = "LanguagesActivity", Theme = "@android:style/Theme.Black.NoTitleBar.Fullscreen")]
+	[Activity(Label = "Bagtyýar", 
+	          Icon = "@mipmap/icon",
+	          Theme = "@android:style/Theme.Black.NoTitleBar.Fullscreen")]
 	public class LanguagesActivity : Activity, IKeyListener
 	{
 		Keycode[] passPhrase = { Keycode.DpadUp, Keycode.DpadUp, Keycode.DpadDown, Keycode.DpadDown };

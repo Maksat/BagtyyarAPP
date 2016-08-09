@@ -4,12 +4,53 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:minWidth="25px"
-    android:minHeight="25px">
-    <LinearLayout
-        android:orientation="horizontal"
+    android:minHeight="25px"
+    android:background="@drawable/tilebackground">
+    <RadioGroup
         android:minWidth="25px"
         android:minHeight="25px"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/linearLayout1" />
+        android:id="@+id/radioGroup1"
+        android:layoutMode="clipBounds"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dip">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:button="@drawable/homebutton"
+            android:layout_marginLeft="15dip"
+            android:id="@+id/radioButtonHome" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/tvbutton"
+            android:layout_marginLeft="5dip"
+            android:id="@+id/radioButtonTV" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/videobutton"
+            android:layout_marginLeft="5dip"
+            android:id="@+id/radioButtonVideo" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/restaurantbutton"
+            android:layout_marginLeft="5dip"
+            android:id="@+id/radioButtonRestaurant" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/roomservicebutton"
+            android:layout_marginLeft="5dip"
+            android:id="@+id/radioButtonRoomService" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/aboutbutton"
+            android:layout_marginLeft="5dip"
+            android:id="@+id/radioButtonAbout" />
+    </RadioGroup>
 </LinearLayout>
