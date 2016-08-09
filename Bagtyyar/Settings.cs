@@ -1,6 +1,8 @@
 ﻿using System;
 using System.IO;
+using System.Security.Cryptography;
 using System.Xml.Serialization;
+using System.Text;
 
 namespace Bagtyyar
 {
@@ -68,10 +70,14 @@ namespace Bagtyyar
 
 			try
 			{
-				Stream reader = new FileStream(Globals.SettingsPath, FileMode.Open); //Initialises the reader
+				string encrypted = File.ReadAllText(Globals.SettingsPath);
+				string decrypted = Crypto.Decrypt(encrypted, "");
+				StringReader stringReader = new StringReader(decrypted);
+
+				//Stream reader = new FileStream(Globals.SettingsPath, FileMode.Open); //Initialises the reader
 			
-				deserializedSettings = (Settings)serializer.Deserialize(reader); //reads from the xml file and inserts it in this variable
-				reader.Close(); //closes the reader
+				deserializedSettings = (Settings)serializer.Deserialize(stringReader); //reads from the xml file and inserts it in this variable
+				stringReader.Close(); //closes the reader
 			}
 			catch (Exception e)
 			{
@@ -87,9 +93,13 @@ namespace Bagtyyar
 			try
 			{
 				XmlSerializer serializer = new XmlSerializer(typeof(Settings));//initialises the serialiser
-				Stream writer = new FileStream(Globals.SettingsPath, FileMode.OpenOrCreate, FileAccess.Write); //Initialises the reader
-				serializer.Serialize(writer, currentSettings);
-				writer.Close();
+
+				StringBuilder stringBuilder = new StringBuilder();
+				StringWriter stringWriter = new StringWriter(stringBuilder);
+				serializer.Serialize(stringWriter, currentSettings);
+				stringWriter.Close();
+				string encrypted = Crypto.Encrypt(stringBuilder.ToString(), "");
+				File.WriteAllText(Globals.SettingsPath, encrypted);
 			}
 			catch (Exception e)
 			{

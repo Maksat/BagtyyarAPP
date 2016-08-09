@@ -60,6 +60,7 @@
     <Compile Include="EntertainmentPageFragment.cs" />
     <Compile Include="Settings.cs" />
     <Compile Include="AdminPage.cs" />
+    <Compile Include="Crypto.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
