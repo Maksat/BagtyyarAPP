@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+
 namespace Bagtyyar
 {
 	public enum Language
@@ -10,7 +12,8 @@ namespace Bagtyyar
 
 	public static class Globals
 	{
-		private static Language selectedLanguage;
+		static Language selectedLanguage;
+		static string settingsPath = "settings.xml"; 
 
 		public static Language SelectedLanguage
 		{
@@ -22,6 +25,16 @@ namespace Bagtyyar
 			set
 			{
 				selectedLanguage = value;
+			}
+		}
+
+		public static string SettingsPath
+		{
+			get
+			{
+				var documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+				var filePath = Path.Combine(documentsPath, settingsPath);
+				return filePath;
 			}
 		}
 	}

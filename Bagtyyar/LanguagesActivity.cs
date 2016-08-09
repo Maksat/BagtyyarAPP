@@ -20,6 +20,7 @@ namespace Bagtyyar
 
 		Button tmButton, ruButton, enButton;
 
+
 		public InputTypes InputType
 		{
 			get
@@ -52,8 +53,7 @@ namespace Bagtyyar
 
 		void CallAdminPage()
 		{
-			#warning implement admin page
-			StartActivity(typeof(MainActivity));
+			new AdminPage(this).Show();
 		}
 
 		bool passPhraseMatches(Keycode key)
@@ -64,6 +64,7 @@ namespace Bagtyyar
 				{
 					if (curPassIndex == passPhrase.Length)
 					{
+						curPassIndex = 0;
 						return true;
 					}
 				}

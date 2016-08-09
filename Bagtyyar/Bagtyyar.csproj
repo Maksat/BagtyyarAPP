@@ -58,6 +58,8 @@
     <Compile Include="RestaurantPageFragment.cs" />
     <Compile Include="ServicesPageFragment.cs" />
     <Compile Include="EntertainmentPageFragment.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="AdminPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -121,6 +123,7 @@
     <AndroidResource Include="Resources\drawable\TVButton.xml" />
     <AndroidResource Include="Resources\drawable\VideoButton.xml" />
     <AndroidResource Include="Resources\drawable\RoomServiceButton.xml" />
+    <AndroidResource Include="Resources\layout\AdminLayout.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
