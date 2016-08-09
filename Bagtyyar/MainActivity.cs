@@ -3,6 +3,9 @@ using Android.App;
 using Android.OS;
 using Android.Views;
 using Android.Graphics.Drawables;
+using Android.Widget;
+using System;
+using Android.Media;
 
 namespace Bagtyyar
 {
@@ -10,7 +13,7 @@ namespace Bagtyyar
 		  Icon = "@mipmap/icon",
 		  Theme = "@android:style/Theme.Black.NoTitleBar.Fullscreen"
 		 )]
-	public class MainActivity : Activity//, ActionBar.ITabListener
+	public class MainActivity : Activity 
 	{
 		HomePageFragment homePageFragment;
 		TVPageFragment tvPageFragment;
@@ -19,131 +22,95 @@ namespace Bagtyyar
 		ServicesPageFragment servicesPageFragment;
 		EntertainmentPageFragment entertainmentPageFragment;
 
-		//ActionBar.Tab homeTab;
-		//ActionBar.Tab tvTab;
-		//ActionBar.Tab videoTab;
-		//ActionBar.Tab restaurnatTab;
-		//ActionBar.Tab servicesTab;
-		//ActionBar.Tab entertainmentTab;
+
+	    void HomeButtonClick(object sender, EventArgs e)
+		{
+			ShowFragment(homePageFragment);
+		}
+
+		void TVButtonClick(object sender, EventArgs e)
+		{
+			ShowFragment(tvPageFragment);
+		}
+
+		void VideoButtonClick(object sender, EventArgs e)
+		{
+			ShowFragment(videoPageFragment);
+		}
+
+		void RestaurantButtonClick(object sender, EventArgs e)
+		{
+			ShowFragment(restaurantPageFragment);
+		}
+
+		void RoomServiceButtonClick(object sender, EventArgs e)
+		{
+			ShowFragment(servicesPageFragment);
+		}
+
+		void EntertainmentButtonClick(object sender, EventArgs e)
+		{
+			ShowFragment(entertainmentPageFragment);
+		}
+
+		void ShowFragment(Fragment fragment)
+		{
+			AudioManager.FromContext(this).PlaySoundEffect(SoundEffect.KeyClick);
+			FragmentTransaction ft = FragmentManager.BeginTransaction();
+			HideAllFragments(ft);
+			ft.Show(fragment);
+			ft.Commit();
+		}
+
+		void HideAllFragments(FragmentTransaction ft)
+		{
+			ft.Hide(homePageFragment);
+			ft.Hide(tvPageFragment);
+			ft.Hide(videoPageFragment);
+			ft.Hide(restaurantPageFragment);
+			ft.Hide(servicesPageFragment);
+			ft.Hide(entertainmentPageFragment);
+		}
+
+		void CreatePageFragments()
+		{
+			FragmentTransaction ft = FragmentManager.BeginTransaction();
+			homePageFragment = new HomePageFragment();
+			tvPageFragment = new TVPageFragment();
+			videoPageFragment = new VidePageFragment();
+			restaurantPageFragment = new RestaurantPageFragment();
+			servicesPageFragment = new ServicesPageFragment();
+			entertainmentPageFragment = new EntertainmentPageFragment();
 
 
-		//public void OnTabReselected(ActionBar.Tab tab, FragmentTransaction ft)
-		//{
-			
-		//}
+			ft.Add(Resource.Id.mainLinearLayout, homePageFragment);
+			ft.Add(Resource.Id.mainLinearLayout, tvPageFragment);
+			ft.Add(Resource.Id.mainLinearLayout, videoPageFragment);
+			ft.Add(Resource.Id.mainLinearLayout, restaurantPageFragment);
+			ft.Add(Resource.Id.mainLinearLayout, servicesPageFragment);
+			ft.Add(Resource.Id.mainLinearLayout, entertainmentPageFragment);
 
-		//public void OnTabSelected(ActionBar.Tab tab, FragmentTransaction ft)
-		//{
-		//	if (tab == homeTab)
-		//	{
-		//		if (homePageFragment == null)
-		//		{
-		//			homePageFragment = new HomePageFragment();
-		//			ft.Add(Resource.Id.linearLayout1, homePageFragment);
-		//		}
-		//		else
-		//		{
-		//			ft.Show(homePageFragment);
-		//		}
+			HideAllFragments(ft);
+			ft.Show(homePageFragment);
 
-		//	}
-		//	else if (tab == tvTab)
-		//	{
+			ft.Commit();
+		}
 
-		//		if (tvPageFragment == null)
-		//		{
-		//			tvPageFragment = new TVPageFragment();
-		//			ft.Add(Resource.Id.linearLayout1, tvPageFragment);
-		//		}
-		//		else
-		//		{
-		//			ft.Show(tvPageFragment);
-		//		}
-		//	}
-		//	else if (tab == videoTab)
-		//	{
-		//		if (videoPageFragment == null)
-		//		{
-		//			videoPageFragment = new VidePageFragment();
-		//			ft.Add(Resource.Id.linearLayout1, videoPageFragment);
-		//		}
-		//		else
-		//		{
-		//			ft.Show(videoPageFragment);
-		//		}
-		//	}else if (tab == restaurnatTab)
-		//	{
-		//		if (restaurantPageFragment == null)
-		//		{
-		//			restaurantPageFragment = new RestaurantPageFragment();
-		//			ft.Add(Resource.Id.linearLayout1, restaurantPageFragment);
-		//		}
-		//		else
-		//		{
-		//			ft.Show(restaurantPageFragment);
-		//		}
-		//	}else if (tab == servicesTab)
-		//	{
-		//		if (servicesPageFragment == null)
-		//		{
-		//			servicesPageFragment = new ServicesPageFragment();
-		//			ft.Add(Resource.Id.linearLayout1, servicesPageFragment);
-		//		}
-		//		else
-		//		{
-		//			ft.Show(servicesPageFragment);
-		//		}
-		//	}
-		//	else if (tab == entertainmentTab)
-		//	{
-		//		if (entertainmentPageFragment == null)
-		//		{
-		//			entertainmentPageFragment = new EntertainmentPageFragment();
-		//			ft.Add(Resource.Id.linearLayout1, entertainmentPageFragment);
-		//		}
-		//		else
-		//		{
-		//			ft.Show(entertainmentPageFragment);
-		//		}
-		//	}
-		//}
+		void AssignHandler(int resourceId, EventHandler ClickHandler)
+		{
+			RadioButton button = FindViewById<RadioButton>(resourceId);
+			button.Click += ClickHandler;
+		}
 
-		//public void OnTabUnselected(ActionBar.Tab tab, FragmentTransaction ft)
-		//{
-		//	if (tab == homeTab)
-		//	{
-		//		ft.Hide(homePageFragment);
-		//	}
-		//	else if (tab == tvTab)
-		//	{
-		//		ft.Hide(tvPageFragment);
-		//	}
-		//	else if (tab == videoTab)
-		//	{
-		//		ft.Hide(videoPageFragment);
-		//	}
-		//	else if (tab == restaurnatTab)
-		//	{
-		//		ft.Hide(restaurantPageFragment);
-		//	}
-		//	else if (tab == servicesTab)
-		//	{
-		//		ft.Hide(servicesPageFragment);
-		//	}
-		//	else if (tab == entertainmentTab)
-		//	{
-		//		ft.Hide(entertainmentPageFragment);
-		//	}
-		//}
-
-		//ActionBar.Tab addTab(int imageId)
-		//{
-		//	ActionBar.Tab tab = ActionBar.NewTab();
-		//	tab.SetTabListener(this);
-		//	tab.SetIcon(imageId);
-		//	ActionBar.AddTab(tab);
-		//	return tab;
-		//}
+		void AssignButtonHandlers()
+		{
+			AssignHandler(Resource.Id.radioButtonHome, HomeButtonClick);
+			AssignHandler(Resource.Id.radioButtonTV, TVButtonClick);
+			AssignHandler(Resource.Id.radioButtonVideo, VideoButtonClick);
+			AssignHandler(Resource.Id.radioButtonRestaurant, RestaurantButtonClick);
+			AssignHandler(Resource.Id.radioButtonRoomService, RoomServiceButtonClick);
+			AssignHandler(Resource.Id.radioButtonAbout, EntertainmentButtonClick);
+		}
 
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
@@ -151,16 +118,11 @@ namespace Bagtyyar
 
 			Window.AddFlags(WindowManagerFlags.Fullscreen);
 
-
-			//ActionBar.NavigationMode = ActionBarNavigationMode.Tabs;
 			SetContentView(Resource.Layout.MainLayout);
 
-			//homeTab = addTab(Resource.Drawable.HomeButton);
-			//tvTab = addTab(Resource.Drawable.TVButton);
-			//videoTab = addTab(Resource.Drawable.VideoButton);
-			//restaurnatTab = addTab(Resource.Drawable.RestaurantButton);
-			//servicesTab = addTab(Resource.Drawable.RoomServiceButton);
-			//entertainmentTab = addTab(Resource.Drawable.AboutButton);
+			AssignButtonHandlers();
+
+			CreatePageFragments();
 		}
 
 		protected override void OnStart()

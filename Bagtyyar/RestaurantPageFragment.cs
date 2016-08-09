@@ -16,7 +16,6 @@ namespace Bagtyyar
 {
 	public class RestaurantPageFragment : Fragment
 	{
-		LayoutInflater localInflater;
 		Button detailsButton;
 		public override void OnCreate(Bundle savedInstanceState)
 		{
@@ -27,7 +26,6 @@ namespace Bagtyyar
 		public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 		{
 			View view = inflater.Inflate(Resource.Layout.RestaurantPageLayout, container, false);
-			localInflater = inflater;
 
 			detailsButton = view.FindViewById<Button>(Resource.Id.button1);
 			detailsButton.Click += (sender, e) =>

@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     android:minWidth="25px"
     android:minHeight="25px"
-    android:background="@drawable/tilebackground">
+    android:background="@drawable/tilebackground"
+    android:id="@+id/mainLinearLayout">
     <RadioGroup
         android:minWidth="25px"
         android:minHeight="25px"
