@@ -97,6 +97,30 @@
     <AndroidResource Include="Resources\layout\RestaurantDetailsPageLayout.axml" />
     <AndroidResource Include="Resources\layout\ServicesPageLayout.axml" />
     <AndroidResource Include="Resources\layout\EntertainmentPageLayout.axml" />
+    <AndroidResource Include="Resources\drawable\About_Button_Highlight.png" />
+    <AndroidResource Include="Resources\drawable\About_Button.png" />
+    <AndroidResource Include="Resources\drawable\About_Button_Selected.png" />
+    <AndroidResource Include="Resources\drawable\Home_Button_Highlight.png" />
+    <AndroidResource Include="Resources\drawable\Home_Button.png" />
+    <AndroidResource Include="Resources\drawable\Home_Button_Selected.png" />
+    <AndroidResource Include="Resources\drawable\Restaurant_Button_Highlight.png" />
+    <AndroidResource Include="Resources\drawable\Restaurant_Button.png" />
+    <AndroidResource Include="Resources\drawable\Restaurant_Button_Selected.png" />
+    <AndroidResource Include="Resources\drawable\Room_Service_Button_Selected.png" />
+    <AndroidResource Include="Resources\drawable\Room_Service_Button_Highlight.png" />
+    <AndroidResource Include="Resources\drawable\Room_Service_Button.png" />
+    <AndroidResource Include="Resources\drawable\TV_Button_Highlight.png" />
+    <AndroidResource Include="Resources\drawable\TV_Button.png" />
+    <AndroidResource Include="Resources\drawable\TV_Button_Selected.png" />
+    <AndroidResource Include="Resources\drawable\Video_Button_Highlight.png" />
+    <AndroidResource Include="Resources\drawable\Video_Button.png" />
+    <AndroidResource Include="Resources\drawable\Video_Button_Selected.png" />
+    <AndroidResource Include="Resources\drawable\AboutButton.xml" />
+    <AndroidResource Include="Resources\drawable\HomeButton.xml" />
+    <AndroidResource Include="Resources\drawable\RestaurantButton.xml" />
+    <AndroidResource Include="Resources\drawable\TVButton.xml" />
+    <AndroidResource Include="Resources\drawable\VideoButton.xml" />
+    <AndroidResource Include="Resources\drawable\RoomServiceButton.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

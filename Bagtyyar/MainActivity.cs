@@ -2,14 +2,13 @@
 using Android.App;
 using Android.OS;
 using Android.Views;
-
+using Android.Graphics.Drawables;
 
 namespace Bagtyyar
 {
 	[Activity(Label = "")]
 	public class MainActivity : Activity, ActionBar.ITabListener
 	{
-
 		HomePageFragment homePageFragment;
 		TVPageFragment tvPageFragment;
 		VidePageFragment videoPageFragment;
@@ -134,6 +133,15 @@ namespace Bagtyyar
 			}
 		}
 
+		ActionBar.Tab addTab(int imageId)
+		{
+			ActionBar.Tab tab = ActionBar.NewTab();
+			tab.SetTabListener(this);
+			tab.SetIcon(imageId);
+			ActionBar.AddTab(tab);
+			return tab;
+		}
+
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
@@ -143,35 +151,12 @@ namespace Bagtyyar
 			ActionBar.NavigationMode = ActionBarNavigationMode.Tabs;
 			SetContentView(Resource.Layout.MainLayout);
 
-			homeTab = ActionBar.NewTab();
-			homeTab.SetTabListener(this);
-			homeTab.SetIcon(Resource.Drawable.EnButton);
-			ActionBar.AddTab(homeTab);
-
-			tvTab = ActionBar.NewTab();
-			tvTab.SetIcon(Resource.Drawable.RuButton);
-			tvTab.SetTabListener(this);
-			ActionBar.AddTab(tvTab);
-
-			videoTab = ActionBar.NewTab();
-			videoTab.SetIcon(Resource.Drawable.TmButton);
-			videoTab.SetTabListener(this);
-			ActionBar.AddTab(videoTab);
-
-			restaurnatTab = ActionBar.NewTab();
-			restaurnatTab.SetIcon(Resource.Drawable.EnButton);
-			restaurnatTab.SetTabListener(this);
-			ActionBar.AddTab(restaurnatTab);
-
-			servicesTab = ActionBar.NewTab();
-			servicesTab.SetIcon(Resource.Drawable.RuButton);
-			servicesTab.SetTabListener(this);
-			ActionBar.AddTab(servicesTab);
-
-			entertainmentTab = ActionBar.NewTab();
-			entertainmentTab.SetIcon(Resource.Drawable.TmButton);
-			entertainmentTab.SetTabListener(this);
-			ActionBar.AddTab(entertainmentTab);
+			homeTab = addTab(Resource.Drawable.HomeButton);
+			tvTab = addTab(Resource.Drawable.TVButton);
+			videoTab = addTab(Resource.Drawable.VideoButton);
+			restaurnatTab = addTab(Resource.Drawable.RestaurantButton);
+			servicesTab = addTab(Resource.Drawable.RoomServiceButton);
+			entertainmentTab = addTab(Resource.Drawable.AboutButton);
 		}
 
 		protected override void OnStart()
