@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 
+
 namespace Bagtyyar
 {
 	public enum Language
@@ -34,7 +35,6 @@ namespace Bagtyyar
 			{
 				var documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
 				var filePath = Path.Combine(documentsPath, settingsPath);
-				Console.WriteLine(File.ReadAllText(filePath));
 				return filePath;
 			}
 		}

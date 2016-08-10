@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Json;
+using System.Net;
+using System.Threading.Tasks;
 using Android.App;
 using Android.Media;
 using Android.OS;
@@ -37,6 +40,9 @@ namespace Bagtyyar
 
 			findViews();
 			assignButtonHandlers();
+
+
+			
 		}
 
 		protected override void OnStart()
@@ -45,6 +51,8 @@ namespace Bagtyyar
 			selectLanguageButton();
 			curPassIndex = 0;
 		}
+
+
 
 	 	void CallMainPage()
 		{
@@ -96,24 +104,6 @@ namespace Bagtyyar
 			}
 		}
 
-		void TmPressed(object sender, EventArgs e)
-		{
-			Globals.SelectedLanguage = Language.TM;
-			CallMainPage();
-		}
-
-		void RuPressed(object sender, EventArgs e)
-		{
-			Globals.SelectedLanguage = Language.RU;
-			CallMainPage();
-		}
-
-		void EnPressed(object sender, EventArgs e)
-		{
-			Globals.SelectedLanguage = Language.EN;
-			CallMainPage();
-		}
-
 		void findViews()
 		{
 			tmButton = FindViewById<Button>(Resource.Id.buttonTM);
@@ -123,9 +113,21 @@ namespace Bagtyyar
 
 		void assignButtonHandlers()
 		{
-			tmButton.Click += TmPressed;
-			ruButton.Click += RuPressed;
-			enButton.Click += EnPressed;
+			tmButton.Click += (sender, e) =>
+			{
+				Globals.SelectedLanguage = Language.TM;
+				CallMainPage();
+			};
+			ruButton.Click += (sender, e) =>
+			{
+				Globals.SelectedLanguage = Language.RU;
+				CallMainPage();
+			};
+			enButton.Click += (sender, e) =>
+			{
+				Globals.SelectedLanguage = Language.EN;
+				CallMainPage();
+			};
 
 			tmButton.KeyListener = this;
 			ruButton.KeyListener = this;
